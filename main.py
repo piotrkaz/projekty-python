@@ -11,3 +11,9 @@ temp_file = json.dumps(data)
 with open('dump_file.json', 'w') as file:
     file.write(temp_file)
 print('Zrzucono dane do pliku.')
+
+temp = json.dumps(data, indent = 3)
+#print(temp)
+
+temp2 = json.dumps(data[0].)
+print(temp2)
