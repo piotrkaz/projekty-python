@@ -12,10 +12,16 @@ with open('dump_file.json', 'w') as file:
     file.write(temp_file)
 print('Zrzucono dane do pliku.')
 
-#temp = json.dumps(data, indent = 3)
-#print(temp)
-#print(type(temp))
-
 temp2 = json.dumps(data[0]['rates'])
-print(temp2)
-print(type(temp2))
+
+with open('mid_rates.json', 'w') as file:
+    file.write(temp2)
+
+print('Zapisano srednie kursy walut.')
+print(f'Oto kursy walut z dnia: {date}')
+
+with open('mid_rates.json') as f:
+    rates = json.load(f)
+
+for rate in rates:
+    print(rate['code'], ' ', rate['mid'])
