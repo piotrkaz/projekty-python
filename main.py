@@ -10,4 +10,4 @@ data = response.json()
 temp_file = json.dumps(data)
 with open('dump_file.json', 'w') as file:
     file.write(temp_file)
-print('Zrzucono dane do pliku')
+print('Zrzucono dane do pliku.')
