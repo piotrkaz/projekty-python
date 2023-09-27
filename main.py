@@ -12,8 +12,10 @@ with open('dump_file.json', 'w') as file:
     file.write(temp_file)
 print('Zrzucono dane do pliku.')
 
-temp = json.dumps(data, indent = 3)
+#temp = json.dumps(data, indent = 3)
 #print(temp)
+#print(type(temp))
 
-temp2 = json.dumps(data[0].)
+temp2 = json.dumps(data[0]['rates'])
 print(temp2)
+print(type(temp2))
