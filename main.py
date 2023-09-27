@@ -7,9 +7,9 @@ url = f'http://api.nbp.pl/api/exchangerates/tables/{table}/{date}/?format=json'
 response = requests.get(url)
 data = response.json()
 
-temp_file = json.dumps(data)
+dump_file = json.dumps(data)
 with open('dump_file.json', 'w') as file:
-    file.write(temp_file)
+    file.write(dump_file)
 print('Zrzucono dane do pliku.')
 
 temp2 = json.dumps(data[0]['rates'])
